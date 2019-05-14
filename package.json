@@ -1,0 +1,26 @@
+{
+  "name": "example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "pika-web"
+  },
+  "devDependencies": {
+    "@pika/web": "^0.3.2",
+    "prettier": "^1.14.3",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "firebase": "^5.0.4",
+    "preact": "latest",
+    "rxjs": "^6.2.2"
+  },
+  "@pika/web": {
+    "webDependencies": [
+      "firebase",
+      "preact",
+      "rxjs",
+      "rxjs/operators"
+    ]
+  }
+}
