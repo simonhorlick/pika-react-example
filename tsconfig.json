@@ -7,7 +7,6 @@
     "outDir": "./dist",
 
     "jsx": "react",
-    "jsxFactory": "h",
 
     "baseUrl": ".",
     "paths": {

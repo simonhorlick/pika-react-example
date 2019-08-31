@@ -11,14 +11,16 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "preact": "latest",
+    "react": "npm:@reactesm/react@^0.1.0",
+    "react-dom": "npm:@reactesm/react-dom@^0.1.1",
     "rxjs": "^6.2.2"
   },
   "@pika/web": {
     "webDependencies": [
-      "preact",
       "rxjs",
-      "rxjs/operators"
+      "rxjs/operators",
+      "react",
+      "react-dom"
     ]
   }
 }

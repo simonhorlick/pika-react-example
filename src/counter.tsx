@@ -1,4 +1,4 @@
-import { Component, h } from "/web_modules/preact.js";
+import * as React from "/web_modules/react.js";
 import { Subject, Subscription } from "/web_modules/rxjs.js";
 import { scan } from "/web_modules/rxjs/operators.js";
 
@@ -6,7 +6,7 @@ interface CounterState {
   counter: number;
 }
 
-export class Counter extends Component<{}, CounterState> {
+export class Counter extends React.Component<{}, CounterState> {
   // onButtonClick is a sink that expects a '1' every time the button is
   // clicked.
   onButtonClick: Subject<number>;
