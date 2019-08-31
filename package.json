@@ -6,18 +6,16 @@
     "prepare": "pika-web"
   },
   "devDependencies": {
-    "@pika/web": "^0.3.2",
+    "@pika/web": "latest",
     "prettier": "^1.14.3",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "firebase": "^5.0.4",
     "preact": "latest",
     "rxjs": "^6.2.2"
   },
   "@pika/web": {
     "webDependencies": [
-      "firebase",
       "preact",
       "rxjs",
       "rxjs/operators"
