@@ -8,7 +8,6 @@ Install packages from npm, then run them through pika so they'll run in the brow
 
 ```bash
 $ npm install
-$ npx @pika/web
 ```
 
 ## Running locally
