@@ -1,11 +1,10 @@
 # pika-react-example
 
-This is a basic example project using pika, typescript, preact and rxjs.
+This is a basic example project using pika, typescript, react and rxjs.
 
 ## Development set up
 
-Install packages from npm, then run them through pika so they'll run in the browser.
-
+Install packages from npm and run them through pika so they'll run in the browser:
 ```bash
 $ npm install
 ```
