@@ -9,10 +9,12 @@
     "jsx": "react",
 
     "baseUrl": ".",
+
     "paths": {
       "/web_modules/*.js": [
+        "node_modules/@types/*",
         "node_modules/*",
-        "web_modules/*.js",
+        "web_modules/*.js"
       ]
     },
   }
