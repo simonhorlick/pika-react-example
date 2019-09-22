@@ -5,6 +5,12 @@
 
     "rootDir": "./src",
     "outDir": "./dist",
+    "sourceMap": true,
+    "sourceRoot": "/sources/",
+
+    "strict": true,
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
 
     "jsx": "react",
 
