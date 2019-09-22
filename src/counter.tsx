@@ -1,46 +1,29 @@
 import * as React from "/web_modules/react.js";
-import { Subject, Subscription } from "/web_modules/rxjs.js";
-import { scan } from "/web_modules/rxjs/operators.js";
+import { CounterBloc } from "./counter_bloc.js"
+import { StreamBuilder } from "./stream_builder.js";
 
-interface CounterState {
-  counter: number;
-}
+export class Counter extends React.Component<{}, {}> {
 
-export class Counter extends React.Component<{}, CounterState> {
-  // onButtonClick is a sink that expects a '1' every time the button is
-  // clicked.
-  onButtonClick: Subject<number>;
-
-  subscription: Subscription;
+  // bloc handles the business logic for Counter.
+  bloc: CounterBloc;
 
   constructor(props: {}) {
     super(props);
-    this.state = {
-      counter: 0
-    };
-    this.onButtonClick = new Subject();
-    this.subscription = Subscription.EMPTY;
-  }
-
-  componentDidMount() {
-    this.subscription = this.onButtonClick
-      .pipe(scan((acc, val) => acc + val))
-      .subscribe(val => this.setState({ counter: val }));
-  }
-
-  componentWillUnmount() {
-    this.subscription.unsubscribe();
+    this.bloc = new CounterBloc();
   }
 
   click() {
-    this.onButtonClick.next(1);
+    this.bloc.onButtonClick.next(1);
   }
 
   render() {
     return (
-      <div>
-        <button onClick={() => this.click()}>{this.state.counter}</button>
-      </div>
+      <StreamBuilder
+        stream={this.bloc.counter}
+        builder={snapshot => (
+          <button onClick={() => this.click()}>{snapshot.data}</button>
+        )}
+      />
     );
   }
 }
